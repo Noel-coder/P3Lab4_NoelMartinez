@@ -6,6 +6,8 @@
 
 int main(int argc, char** argv) {
 	Dama* dama = new Dama();
+	dama->PrepararTablero();
 	dama->imprimirTablero();
+	delete dama;
 	return 0;
 }

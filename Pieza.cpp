@@ -21,12 +21,6 @@ string Pieza::toString(){   //to string y otro to string en casilla
 	}
 }
 
-/*string Pieza::toStringBando(){   //to string y otro to string en casilla
-	
-	//return bando;
-}*/
-
-
 bool Pieza:: getBando() {
 	return this->bando;
 }

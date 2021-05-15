@@ -12,8 +12,8 @@ Casilla::Casilla(Pieza* _piezaAsignada) {
 
 string Casilla::toString() {
 	if(piezaAsignada == NULL) {
-		cout <<  " ";
+		return  " ";
 	} else {
-		cout << "[ " << piezaAsignada->toString() << " ]";
+		return  piezaAsignada->toString();
 	}
 }

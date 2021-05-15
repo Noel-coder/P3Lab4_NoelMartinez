@@ -5,7 +5,7 @@ Dama::Dama() {
 }
 
 Dama::~Dama() {
-	
+
 }
 
 void Dama::PrepararTablero() {
@@ -15,74 +15,100 @@ void Dama::PrepararTablero() {
 	}
 
 	//Aqui Ingresariamos las piezas
-	for(int i = 0; i < 8 ; i++) {
-		for(int j=0; j < 8; j++) {
-			//PIEZAS BLANCAS
-			if(i==0 && j%2==0) {
-				tablero[i][j]=new Casilla(new Pieza(false,NULL));//si la casilla esta vacia se haria se haria NULL
-			} else if(i==0 && j%2==1) {
-				tablero[i][j]=new Casilla(NULL);
-			}
-			//SEGUNDA FILA BLANCAS
-			if(i==1 && j%2==1) {
-				tablero[i][j]=new Casilla(new Pieza(false,NULL));//si la casilla esta vacia se haria se haria NULL
-			} else if(i==1 && j%2 == 0) {
-				tablero[i][j]=new Casilla(NULL);
-			}
-			//TERCER FILA BLANCAS
-			if(i==2 && j%2==0) {
-				tablero[i][j]=new Casilla(new Pieza(false,NULL));//si la casilla esta vacia se haria se haria NULL
-			} else if(i==2 && j%2 == 1) {
-				tablero[i][j]=new Casilla(NULL);
-			}
+	tablero[0][0] = new Casilla( new Pieza(false,false));
+	tablero[0][1] = new Casilla(NULL);
+	tablero[0][2] = new Casilla( new Pieza(false,false));
+	tablero[0][3] = new Casilla(NULL);
+	tablero[0][4] = new Casilla( new Pieza(false,false));
+	tablero[0][5] = new Casilla(NULL);
+	tablero[0][6] = new Casilla( new Pieza(false,false));
+	tablero[0][7] = new Casilla(NULL);
 
-			//LINEAS CENTRALES
-			if(i==3 || i==4) {
-				tablero[i][j]=new Casilla(new Pieza(NULL,NULL));//si la casilla esta vacia se haria se haria NULL
-			}
+	tablero[1][0] = new Casilla(NULL);
+	tablero[1][1] = new Casilla( new Pieza(false,false));
+	tablero[1][2] = new Casilla(NULL);
+	tablero[1][3] = new Casilla( new Pieza(false,false));
+	tablero[1][4] = new Casilla(NULL);
+	tablero[1][5] = new Casilla( new Pieza(false,false));
+	tablero[1][6] = new Casilla(NULL);
+	tablero[1][7] = new Casilla( new Pieza(false,false));
 
-			//PIEZAS NEGRAS
-			if(i==5 && j%2==1) {
-				tablero[i][j]=new Casilla(new Pieza(true,NULL));//si la casilla esta vacia se haria se haria NULL
-			} else if(i==5 && j%2==0) {
-				tablero[i][j]=new Casilla(NULL);
-			}
-			//SEGUNDA FILA NEGRAS
-			if(i==6 && j%2==0) {
-				tablero[i][j]=new Casilla(new Pieza(true,NULL));//si la casilla esta vacia se haria se haria NULL
-			} else if(i==6 && j%2 == 1) {
-				tablero[i][j]=new Casilla(NULL);
-			}
-			//TERCER FILA NEGRAS
-			if(i==7 && j%2==1) {
-				tablero[i][j]=new Casilla(new Pieza(true,NULL));//si la casilla esta vacia se haria se haria NULL
-			} else if(i==7 && j%2 == 0) {
-				tablero[i][j]=new Casilla(NULL);
-			}
-		}
-	}
+	tablero[2][0] = new Casilla( new Pieza(false,false));
+	tablero[2][1] = new Casilla(NULL);
+	tablero[2][2] = new Casilla( new Pieza(false,false));
+	tablero[2][3] = new Casilla(NULL);
+	tablero[2][4] = new Casilla( new Pieza(false,false));
+	tablero[2][5] = new Casilla(NULL);
+	tablero[2][6] = new Casilla( new Pieza(false,false));
+	tablero[2][7] = new Casilla(NULL);
+
+	tablero[3][0] = new Casilla(NULL);
+	tablero[3][1] = new Casilla(NULL);
+	tablero[3][2] = new Casilla(NULL);
+	tablero[3][3] = new Casilla(NULL);
+	tablero[3][4] = new Casilla(NULL);
+	tablero[3][5] = new Casilla(NULL);
+	tablero[3][6] = new Casilla(NULL);
+	tablero[3][7] = new Casilla(NULL);
+
+	tablero[4][0] = new Casilla(NULL);
+	tablero[4][1] = new Casilla(NULL);
+	tablero[4][2] = new Casilla(NULL);
+	tablero[4][3] = new Casilla(NULL);
+	tablero[4][4] = new Casilla(NULL);
+	tablero[4][5] = new Casilla(NULL);
+	tablero[4][6] = new Casilla(NULL);
+	tablero[4][7] = new Casilla(NULL);
+
+	tablero[5][0] = new Casilla(NULL);
+	tablero[5][1] = new Casilla( new Pieza(true,false));
+	tablero[5][2] = new Casilla(NULL);
+	tablero[5][3] = new Casilla( new Pieza(true,false));
+	tablero[5][4] = new Casilla(NULL);
+	tablero[5][5] = new Casilla( new Pieza(true,false));
+	tablero[5][6] = new Casilla(NULL);
+	tablero[5][7] = new Casilla( new Pieza(true,false));
+
+	tablero[6][0] = new Casilla( new Pieza(true,false));
+	tablero[6][1] = new Casilla(NULL);
+	tablero[6][2] = new Casilla( new Pieza(true,false));
+	tablero[6][3] = new Casilla(NULL);
+	tablero[6][4] = new Casilla( new Pieza(true,false));
+	tablero[6][5] = new Casilla(NULL);
+	tablero[6][6] = new Casilla( new Pieza(true,false));
+	tablero[6][7] = new Casilla(NULL);
+
+	tablero[7][0] = new Casilla(NULL);
+	tablero[7][1] = new Casilla( new Pieza(true,false));
+	tablero[7][2] = new Casilla(NULL);
+	tablero[7][3] = new Casilla( new Pieza(true,false));
+	tablero[7][4] = new Casilla(NULL);
+	tablero[7][5] = new Casilla( new Pieza(true,false));
+	tablero[7][6] = new Casilla(NULL);
+	tablero[7][7] = new Casilla( new Pieza(true,false));
 }
 
 void Dama::imprimirTablero() {
 	for(int i = 0; i < 8 ; i++) {
 		for(int j = 0; j < 8; j++) {
-			cout << "[ "<<tablero[i][j]->toString()<< " ]";
+			cout <<"[ "<<tablero[i][j]->toString()<< " ]";
+			cont++;
 		}
 		cout<<endl;
 	}
 }
 
-bool Dama::validarMovimiento(int x,int y){
+bool Dama::validarMovimiento(int x,int y) {
 	//VALIDAR QUE NO SE SALGA DEL RANGO
 	bool decision;
-	while (!decision){
-		if(x < 0 && x > 7 && y < 0 && y > 7){
+	while (!decision) {
+		if(x < 0 && x > 7 && y < 0 && y > 7) {
 			cout << "No puede salirse del tablero!!" << endl;
 			cout << "Ingrese la fila: " << endl;
 			cin >> x;
 			cout << "Ingrese la columna: " << endl;
 			cin >> y;
-		}else{
+		} else {
 			decision=true;
 		}
 	}
@@ -103,12 +129,12 @@ bool Dama::validarMovimiento(int x,int y){
 	decision=true;
 	/*while(!decision){
 		if(){
-			
+
 		}
 	}*/
 }
 
-void Jugar(){
-	
+void Jugar() {
+
 }
 
