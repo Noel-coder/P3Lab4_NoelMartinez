@@ -30,7 +30,7 @@ void Pieza::setBando(bool _bando) {
 }
 
 bool Pieza:: getReina() {
-	return this->bando;
+	return this->reina;
 }
 
 void Pieza::setReina(bool _reina) {

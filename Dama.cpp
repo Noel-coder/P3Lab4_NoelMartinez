@@ -92,7 +92,6 @@ void Dama::imprimirTablero() {
 	for(int i = 0; i < 8 ; i++) {
 		for(int j = 0; j < 8; j++) {
 			cout <<"[ "<<tablero[i][j]->toString()<< " ]";
-			cont++;
 		}
 		cout<<endl;
 	}
@@ -134,7 +133,26 @@ bool Dama::validarMovimiento(int x,int y) {
 	}*/
 }
 
-void Jugar() {
-
+void Dama::Jugar(){
+	string j1,j2;
+	int x,y;
+	cout << "Ingrese el nombre del Jugador 1: "<<endl;
+	getline(cin,j1);
+	cout << "Ingrese el nombre del Jugador 2: "<<endl;
+	getline(cin,j2);
+	cout << "Turno de " << j1 <<endl;
+	cout << j1 << " Ingrese la fila a mover: " << endl;
+	cin >> x;
+	cout << j1 << " Ingrese la columna a mover: " <<endl;
+	cin >> y;
+	cout << "Jugada guardada con exito!"<<endl;
+	cout << "Refrescando..." <<endl;
+	cout << "Turno de " << j2 <<endl;
+	system("pause");
+	cout << j2 << " Ingrese la fila a mover: " << endl;
+	cin >> x;
+	cout << j2 << " Ingrese la columna a mover: " <<endl;
+	cin >> y;
+	cout << "Jugada guardada con exito!"<<endl;
 }
 
